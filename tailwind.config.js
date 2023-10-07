@@ -13,7 +13,7 @@ export default {
         medium: ["24px"],
       },
       backgroundImage: {
-        'parallax': "url('/img/hero-pattern.svg')",
+        'parallax': "url('https://i.ibb.co/Mk8VX6t/parallax.jpg')",
       }
     },
   },

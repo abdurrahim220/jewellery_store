@@ -1,10 +1,11 @@
 import React from "react";
-import Nav from "../Shared/NavBar/Extra";
+
 import Services from "./Services/Services";
 
 import ResCarousel from "./Banner/Carousel";
 import EarRing from "./EarRing/EarRing";
 import Offers from "./Offers/Offers";
+import Parallax from "./Parallax/Parallax";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Services />
       <EarRing/>
       <Offers/>
+      <Parallax/>
     </div>
   );
 };
