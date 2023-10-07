@@ -9,6 +9,7 @@ export default {
       },
       fontSize: {
         base: ["15px"],
+        medium: ["24px"],
       },
     },
   },

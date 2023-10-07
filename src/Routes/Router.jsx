@@ -1,27 +1,36 @@
-import {
-    createBrowserRouter,
+import { createBrowserRouter } from "react-router-dom";
+// import Main from "../Layout/Main";
 
-  } from "react-router-dom";
-import Main from "../Layout/Main";
-import Home from "../pages/Home/Home";
 import Blog from "../pages/Blog/Blog";
+import Loading from "../component/Loading/Loading";
+import React, { Suspense } from "react";
+import LoadingHome from "../component/Loading/LoadingHome";
+import Error from "../component/Error/Error";
 
-  
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main/>,
-      children:[
-        {
-          path:'/',
-          element:<Home/>
-        },
-        {
-          path:'/blog',
-          element:<Blog/>
-        },
-        
-      ]
-    },
-  ]);
-export default router
+const Main = React.lazy(() => import("../Layout/Main"));
+const Home = React.lazy(() => import("../pages/Home/Home"));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    errorElement:<Error></Error>,
+    element: (
+      <Suspense fallback={<Loading />}>
+        <Main />
+      </Suspense>
+    ),
+    children: [
+      {
+        path: "/",
+        element: 
+          <Suspense fallback={<LoadingHome/>}>
+            <Home />
+          </Suspense>
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+    ],
+  },
+]);
+export default router;
