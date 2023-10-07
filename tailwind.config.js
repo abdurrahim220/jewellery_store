@@ -12,6 +12,9 @@ export default {
         sm: ["20px"],
         medium: ["24px"],
       },
+      backgroundImage: {
+        'parallax': "url('/img/hero-pattern.svg')",
+      }
     },
   },
   plugins: [],

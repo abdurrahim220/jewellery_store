@@ -4,6 +4,7 @@ import Services from "./Services/Services";
 
 import ResCarousel from "./Banner/Carousel";
 import EarRing from "./EarRing/EarRing";
+import Offers from "./Offers/Offers";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <ResCarousel/>
       <Services />
       <EarRing/>
+      <Offers/>
     </div>
   );
 };
