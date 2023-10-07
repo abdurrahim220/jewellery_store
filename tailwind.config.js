@@ -4,8 +4,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        jost: ["Jost", sans - serif],
-        manrope: ["Manrope", sans - serif],
+        jost: ["Jost"],
+        manrope: ["Manrope"],
+      },
+      fontSize: {
+        base: ["15px"],
       },
     },
   },
