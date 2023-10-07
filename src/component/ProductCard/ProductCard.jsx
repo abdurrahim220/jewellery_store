@@ -32,7 +32,7 @@ const ProductCard = ({ title, price, imageUrl, rating }) => {
         )}
       </div>
 
-      <div className="p-4">
+      <div className="p-4 font-manrope">
         <h2 className="text-lg font-semibold">{title}</h2>
         <div className="flex justify-between items-center">
           <p className="text-gray-600">${price}</p>
