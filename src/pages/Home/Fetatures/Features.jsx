@@ -2,94 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "../../../component/ProductCard/ProductCard";
 import { BiSolidRightArrow } from "react-icons/bi";
+import useFeatures from "../../../hooks/useFeatures";
+import LoadingHome from "../../../component/Loading/LoadingHome";
 
 const Features = () => {
-  const products = [
-    {
-      "id": 1,
-      "category": "Necklaces",
-      "title": "Diamond Pendant Necklace",
-      "price": 199.99,
-      "rating": 4.5,
-      "image": "https://i.ibb.co/Db3NV9p/8.png",
-      "sold": 50,
-      "remaining": 50,
-      "total_reviews": 25,
-      "availability": "In Stock"
-    },
-    {
-      "id": 2,
-      "category": "Earrings",
-      "title": "Pearl Stud Earrings",
-      "price": 99.99,
-      "rating": 3.8,
-      "image": "https://i.ibb.co/PCKgdTg/7.png",
-      "sold": 75,
-      "remaining": 25,
-      "total_reviews": 18,
-      "availability": "In Stock"
-    },
-    {
-      "id": 3,
-      "category": "Rings",
-      "title": "Sapphire Engagement Ring",
-      "price": 349.99,
-      "rating": 4.2,
-      "image": "https://i.ibb.co/9G0kVkv/download.png",
-      "sold": 20,
-      "remaining": 80,
-      "total_reviews": 10,
-      "availability": "In Stock"
-    },
-    {
-      "id": 4,
-      "category": "Bracelets",
-      "title": "Gold Bangle Bracelet",
-      "price": 149.99,
-      "rating": 4.0,
-      "image": "https://i.ibb.co/PYgtrZJ/5.png",
-      "sold": 60,
-      "remaining": 40,
-      "total_reviews": 15,
-      "availability": "In Stock"
-    },
-    {
-      "id": 5,
-      "category": "Earrings",
-      "title": "Emerald Drop Earrings",
-      "price": 249.99,
-      "rating": 4.7,
-      "image": "https://i.ibb.co/HzJgZVR/4.png",
-      "sold": 90,
-      "remaining": 10,
-      "total_reviews": 30,
-      "availability": "In Stock"
-    },
-    {
-      "id": 6,
-      "category": "Necklaces",
-      "title": "Sapphire and Diamond Necklace",
-      "price": 299.99,
-      "rating": 3.5,
-      "image": "https://i.ibb.co/19DFgyv/3.png",
-      "sold": 40,
-      "remaining": 60,
-      "total_reviews": 12,
-      "availability": "In Stock"
-    },
-    {
-      "id": 7,
-      "category": "Rings",
-      "title": "Ruby Cocktail Ring",
-      "price": 199.99,
-      "rating": 4.3,
-      "image": "https://i.ibb.co/VHfq8kH/1.png",
-      "sold": 70,
-      "remaining": 30,
-      "total_reviews": 22,
-      "availability": "Sold Out"
-    }
-  ];  
+  
+const [products,loading] = useFeatures()
 
   return (
     <div className="py-5 px-3 lg:px-0 container mx-auto">
@@ -102,7 +20,7 @@ const Features = () => {
             </Link>
           </div>
           <div className="cards">
-            {products.slice(0, 3).map((product, index) => {
+            {loading ?  products.slice(0, 3).map((product, index) => {
               return (
                 <div
                   key={index}
@@ -126,7 +44,7 @@ const Features = () => {
                   </div>
                 </div>
               );
-            })}
+            }) : <LoadingHome/>}
           </div>
 
           
@@ -174,7 +92,7 @@ const Features = () => {
             <img src="https://i.ibb.co/fvvYWs9/titlebar.png" alt="" />
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 py-5 px-5">
-            {products.map((product, index) => {
+            {loading ? products.map((product, index) => {
               return (
                 <ProductCard
                   key={index}
@@ -184,9 +102,11 @@ const Features = () => {
                   imageUrl={product.image}
                 />
               );
-            })}
+            }): <LoadingHome/> }
           </div>
         </div>
+
+        
       </div>
     </div>
   );
