@@ -40,6 +40,7 @@ const ViewAll = () => {
                         rating={product.rating}
                         image={product.image}
                         availability={product.availability}
+                        id={product._id}
                       />
                     );
                   })

@@ -5,8 +5,9 @@ import "@smastrom/react-rating/style.css";
 import { HiOutlineShoppingCart,HiOutlineEye ,HiOutlineBadgeCheck} from "react-icons/hi";
 import { TbDetails } from "react-icons/tb";
 import { LuEye } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
-const ProductCard = ({ title, price, image, rating,availability }) => {
+const ProductCard = ({ title, price, image,id, rating,availability }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -31,7 +32,7 @@ const ProductCard = ({ title, price, image, rating,availability }) => {
             <HiOutlineShoppingCart size={25}/>
             </button>
             <button title="short details"><LuEye color="white" size={25}/></button>
-            <button title="full details"><TbDetails color="white" size={25}/></button>
+           <Link to={`/singleProduct/${id}`} > <button title="full details"><TbDetails color="white" size={25}/></button></Link>
           </div>
         )}
         <span className="bg-black text-white absolute top-2 font-manrope leading-4 font-normal text-[10px] ml-2 rounded-md py-1 px-2">{availability}</span>
