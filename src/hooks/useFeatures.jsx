@@ -4,10 +4,10 @@ import AxiosSecure from './AxiosSecure';
 const useFeatures = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [axiosSecure] = AxiosSecure()
+    const [baseUrl] = AxiosSecure()
   
     useEffect(() => {
-      axiosSecure.get(`features`)
+      baseUrl.get(`features`)
         .then((res) => res.data)
         .then((data) => {
           setProducts(data);

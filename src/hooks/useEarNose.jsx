@@ -1,22 +1,13 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
 import AxiosSecure from "./AxiosSecure";
-
-
+import { useQuery } from "@tanstack/react-query";
 
 const useEarNose = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [axiosSecure] = AxiosSecure()
+  const [baseUrl] = AxiosSecure();
 
-  useEffect(() => {
-    axiosSecure.get(`earNose`)
-      .then((res) => res.data)
-      .then((data) => {
-        setProducts(data);
-        setLoading(true);
-      });
-  }, [loading]);
+  const { data:products=[],isLoading: loading,  } = useQuery({
+    queryKey: ["products"],
+    queryFn: () => baseUrl.get(`earNose`).then((res) => res.data),
+  });
   return [products, loading];
 };
 

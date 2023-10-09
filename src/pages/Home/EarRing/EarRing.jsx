@@ -7,7 +7,9 @@ import LoadingHome from "../../../component/Loading/LoadingHome";
 const EarRing = () => {
   
   const [products,loading] = useEarNose()
-
+  // if (loading) {
+  //   return <h1 className="text-4xl">Loading...........</h1>;
+  // }
   //https://i.ibb.co/VpNp2Ss/ear-ring-1.jpg
   // https://i.ibb.co/6gg8GfJ/ear-ring.jpg
   return (
@@ -35,7 +37,16 @@ const EarRing = () => {
 
         <div className="lg:w-[75%]">
           <div className="grid px-2 md:px-0 grid-cols-2 gap-2 lg:gap-5 md:grid-cols-4">
-            {loading ? products.map((product, index) => (
+            {/* {products.map((product, index) => (
+              <ProductCard
+                key={index}
+                title={product.title}
+                price={product.price}
+                rating={product.rating}
+                imageUrl={product.image_link}
+              />
+            ))} */}
+            {!loading ? products.map((product, index) => (
               <ProductCard
                 key={index}
                 title={product.title}
