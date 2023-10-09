@@ -2,12 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "../../../component/ProductCard/ProductCard";
 import { BiSolidRightArrow } from "react-icons/bi";
-import useFeatures from "../../../hooks/useFeatures";
+
 import LoadingHome from "../../../component/Loading/LoadingHome";
+
+import useProductData from "../../../hooks/useProductData";
 
 const Features = () => {
   
-const [products,loading] = useFeatures()
+const [products,loading] = useProductData()
+
+const allProducts = products.filter(item=> item.category !== 'earrings')
+
 
   return (
     <div className="py-5 px-3 lg:px-0 container mx-auto">
@@ -15,12 +20,13 @@ const [products,loading] = useFeatures()
         <div className="lg:w-[25%]">
           <div className="flex items-center justify-between px-2 font-manrope">
             <h1 className="font-extrabold text-medium">Featured Deals</h1>
-            <Link className="font-extrabold text-base" to="">
+            <Link className="font-extrabold text-base" to="/store">
               View all
             </Link>
           </div>
+
           <div className="cards">
-            {loading ?  products.slice(0, 3).map((product, index) => {
+            {!loading ?  products.slice(0, 3).map((product, index) => {
               return (
                 <div
                   key={index}
@@ -92,14 +98,15 @@ const [products,loading] = useFeatures()
             <img src="https://i.ibb.co/fvvYWs9/titlebar.png" alt="" />
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 py-5 px-5">
-            {loading ? products.map((product, index) => {
+            {!loading ? allProducts.map((product, index) => {
               return (
                 <ProductCard
                   key={index}
                   title={product.title}
                   price={product.price}
                   rating={product.rating}
-                  imageUrl={product.image}
+                  image={product.image}
+                  availability={product.availability}
                 />
               );
             }): <LoadingHome/> }

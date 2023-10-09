@@ -6,6 +6,7 @@ import Loading from "../component/Loading/Loading";
 import React, { Suspense } from "react";
 import LoadingHome from "../component/Loading/LoadingHome";
 import Error from "../component/Error/Error";
+import ViewAll from "../pages/ViewAll/ViewAll";
 
 const Main = React.lazy(() => import("../Layout/Main"));
 const Home = React.lazy(() => import("../pages/Home/Home"));
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/store",
+        element: <ViewAll/>,
       },
     ],
   },
