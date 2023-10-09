@@ -14,7 +14,6 @@ export default {
       },
       backgroundImage: {
         'parallax': "url('https://i.ibb.co/Mk8VX6t/parallax.jpg')",
-        'backTitle': "url('https://i.ibb.co/fvvYWs9/titlebar.png')",
       }
     },
   },

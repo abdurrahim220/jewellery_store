@@ -7,6 +7,7 @@ import EarRing from "./EarRing/EarRing";
 import Offers from "./Offers/Offers";
 import Parallax from "./Parallax/Parallax";
 import Features from "./Fetatures/Features";
+import WeekendDeals from "./WeekendDeals/WeekendDeals";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Offers/>
       <Features/>
       <Parallax/>
+      <WeekendDeals/>
     </div>
   );
 };
