@@ -107,6 +107,7 @@ const allProducts = products.filter(item=> item.category !== 'earrings')
                   rating={product.rating}
                   image={product.image}
                   availability={product.availability}
+                  id={product._id}
                 />
               );
             }): <LoadingHome/> }

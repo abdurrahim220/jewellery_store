@@ -45,6 +45,7 @@ const EarRing = () => {
                 rating={product.rating}
                 image={product.image}
                 availability={product.availability}
+                id={product._id}
               />
             )) :<LoadingHome/> }
           </div>
