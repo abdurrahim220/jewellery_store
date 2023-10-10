@@ -32,9 +32,10 @@ const SingleProducts = () => {
     availability,
   } = data;
 
-  console.log(data);
+  // console.log(data);
   return (
     <div className="container my-10 mx-auto">
+
       <div className="lg:flex px-2  lg:px-0 gap-5">
         <div className="lg:w-[50%]">
           <Carousel className="">

@@ -2,27 +2,24 @@ import React, { useState } from "react";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import "@smastrom/react-rating/style.css";
-import {
-  HiOutlineShoppingCart,
-  HiOutlineEye,
-  HiOutlineBadgeCheck,
-} from "react-icons/hi";
+import { HiOutlineShoppingCart } from "react-icons/hi";
 import { TbDetails } from "react-icons/tb";
 import { LuEye } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import Modal from "../Modal/Modal";
+
+import ModalPopUp from "../Modal/Modal";
 
 const ProductCard = ({ title, price, image, id, rating, availability }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [modalOn, setModalOn] = useState(false);
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
 
   return (
     <div>
       <div
         className="relative group rounded-lg  transition transform hover:scale-105"
-        onMouseEnter={()=>setIsHovered(true)}
-        
-        onMouseLeave={()=>setIsHovered(false)}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <img src={image} alt="" className="w-[270px] h-64 rounded-md" />
 
@@ -35,7 +32,7 @@ const ProductCard = ({ title, price, image, id, rating, availability }) => {
               <HiOutlineShoppingCart size={25} />
             </button>
 
-            <button onClick={()=>setModalOn(false)} title="short details">
+            <button onClick={() => setIsOpen(true)} title="short details">
               <LuEye color="white" size={25} />
             </button>
 
@@ -58,8 +55,13 @@ const ProductCard = ({ title, price, image, id, rating, availability }) => {
           <Rating style={{ maxWidth: 70 }} readOnly value={rating} />
         </div>
       </div>
-
-      {modalOn && <Modal id={id} modalOn={modalOn} close={()=>setModalOn(false)} setModalOn={setModalOn} />}
+      
+      <ModalPopUp
+        modalIsOpen={modalIsOpen}
+        id={id}
+        setIsOpen={setIsOpen}
+        close={() => setIsOpen(false)}
+      />
     </div>
   );
 };
