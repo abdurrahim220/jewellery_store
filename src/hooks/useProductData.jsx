@@ -8,6 +8,7 @@ const useProductData = () => {
     queryKey: ["products"],
     queryFn: () => baseUrl.get(`products`).then((res) => res.data),
   });
+  // console.log(products)
   return [products, loading];
 };
 

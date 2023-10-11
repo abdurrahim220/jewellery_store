@@ -8,11 +8,46 @@ import { LuEye } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 import ModalPopUp from "../Modal/Modal";
+import AddToCart from "../AddToCart/AddToCart";
 
 const ProductCard = ({ title, id, price, image, rating, availability }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalCartOpen, setCartOpen] = useState(false);
+
+  // const [bookmarks, setBookmarks] = useState(
+  //   JSON.parse(localStorage.getItem('bookmarks')) || []
+  // );
+  const product = {title,id,price,image}
+
+  const addBookmark = () => {
+    // const updatedBookmarks = [...bookmarks, product];
+    // localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
+    // setBookmarks(updatedBookmarks);
+    // console.log(updatedBookmarks)
+    fetch("http://localhost:5001/products/addCart", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(product),
+        })
+            .then((res) => res.json())
+            .then((result) => { 
+                // console.log(result)
+                
+            });
+
+  };
+
+ 
+   const handleSetCart =()=>{
+    setCartOpen(true)
+
+  }
+  const handleClick =()=>{
+    addBookmark();
+    handleSetCart()
+  }
 
   return (
     <div>
@@ -25,13 +60,25 @@ const ProductCard = ({ title, id, price, image, rating, availability }) => {
 
         {isHovered && (
           <div className="absolute bottom-0 left-0 py-1 right-0 gap-1 flex items-center bg-black justify-around ">
-            <button
-              title="add to cart"
-              className=" text-white rounded-lg  transition duration-300"
-            >
-              <HiOutlineShoppingCart size={25} />
-            </button>
-            
+            <div>
+              <button
+                title="add to cart"
+                className=" text-white rounded-lg  transition duration-300"
+                onClick={handleClick}
+                // onClick={() => setCartOpen(true)}
+              >
+                <HiOutlineShoppingCart size={25} />
+              </button>
+
+              <AddToCart
+                modalIsOpen={modalCartOpen}
+                id={id}
+                setIsOpen={setCartOpen}
+             
+                close={() => setCartOpen(false)}
+              />
+            </div>
+
             <div>
               <button onClick={() => setIsOpen(true)} title="short details">
                 <LuEye color="white" size={25} />
