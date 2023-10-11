@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 
@@ -7,22 +7,23 @@ const Navbar = () => {
   const user = true;
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+
   const navItem = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <Link to="/store">All jewelry</Link>
+        <NavLink to="/store">All jewelry</NavLink>
       </li>
       <li>
-        <Link to="/">My Jewelry</Link>
+        <NavLink to="/">My Jewelry</NavLink>
       </li>
       <li>
-        <Link to="/">Add jewelry</Link>
+        <NavLink to="/">Add jewelry</NavLink>
       </li>
       <li>
-        <Link to="/">Blogs</Link>
+        <NavLink to="/">Blogs</NavLink>
       </li>
     </>
   );

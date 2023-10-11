@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 import ModalPopUp from "../Modal/Modal";
 
-const ProductCard = ({ title, price, image, id, rating, availability }) => {
+const ProductCard = ({ title, id, price, image, rating, availability }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -31,10 +31,18 @@ const ProductCard = ({ title, price, image, id, rating, availability }) => {
             >
               <HiOutlineShoppingCart size={25} />
             </button>
-
-            <button onClick={() => setIsOpen(true)} title="short details">
-              <LuEye color="white" size={25} />
-            </button>
+            
+            <div>
+              <button onClick={() => setIsOpen(true)} title="short details">
+                <LuEye color="white" size={25} />
+              </button>
+              <ModalPopUp
+                modalIsOpen={modalIsOpen}
+                id={id}
+                setIsOpen={setIsOpen}
+                close={() => setIsOpen(false)}
+              />
+            </div>
 
             <Link to={`/singleProduct/${id}`}>
               <button title="full details">
@@ -55,13 +63,6 @@ const ProductCard = ({ title, price, image, id, rating, availability }) => {
           <Rating style={{ maxWidth: 70 }} readOnly value={rating} />
         </div>
       </div>
-      
-      <ModalPopUp
-        modalIsOpen={modalIsOpen}
-        id={id}
-        setIsOpen={setIsOpen}
-        close={() => setIsOpen(false)}
-      />
     </div>
   );
 };

@@ -8,8 +8,8 @@ li {
   cursor: pointer;
   /* position: relative; */
 }
-
-/* li:hover::before {
+/* 
+li:hover::before {
   position: absolute;
   content: " ";
   height: 4px;

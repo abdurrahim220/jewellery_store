@@ -97,6 +97,7 @@ const allProducts = products.filter(item=> item.category !== 'earrings')
           <div className="">
             <img src="https://i.ibb.co/fvvYWs9/titlebar.png" alt="" />
           </div>
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 py-5 px-5">
             {!loading ? allProducts.map((product, index) => {
               return (
@@ -113,8 +114,6 @@ const allProducts = products.filter(item=> item.category !== 'earrings')
             }): <LoadingHome/> }
           </div>
         </div>
-
-        
       </div>
     </div>
   );
