@@ -15,11 +15,12 @@ const ProductCard = ({ title, id, price, image, rating, availability }) => {
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [modalCartOpen, setCartOpen] = useState(false);
+  // console.log(id)
 
   // const [bookmarks, setBookmarks] = useState(
   //   JSON.parse(localStorage.getItem('bookmarks')) || []
   // );
-  const product = {title,id,price,image}
+  const product = {title,price,image}
 
   const addBookmark = () => {
     // const updatedBookmarks = [...bookmarks, product];
@@ -33,10 +34,8 @@ const ProductCard = ({ title, id, price, image, rating, availability }) => {
         })
             .then((res) => res.json())
             .then((result) => { 
-                // console.log(result)
-                
+                // console.log(result) 
             });
-
   };
 
  

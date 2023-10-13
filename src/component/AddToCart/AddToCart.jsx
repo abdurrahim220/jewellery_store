@@ -16,7 +16,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 //   },
 // };
 
-const AddToCart = ({ id, modalIsOpen, setIsOpen }) => {
+const AddToCart = ({ modalIsOpen, setIsOpen }) => {
   const [baseUrl] = AxiosSecure();
   const { refetch,data: product = [], isLoading: loading } = useQuery({
     queryKey: ["product"],
