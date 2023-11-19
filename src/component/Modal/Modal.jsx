@@ -24,7 +24,7 @@ const ModalPopUp = ({ id, modalIsOpen, setIsOpen }) => {
     queryFn: () => baseUrl.get(`products/${id}`).then((res) => res.data),
   });
   // console.log(id)
-  console.log(product)
+  // console.log(product)
   const {
     image,
     price,
