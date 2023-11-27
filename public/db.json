@@ -1,0 +1,198 @@
+[
+  {
+    "_id": "6523d27dd27f56692b2c0322",
+    "image": "https://i.ibb.co/d7yxQkk/ear-rings-1.jpg",
+    "category": "earrings",
+    "title": "Crystal Teardrop Earrings",
+    "price": "32.99",
+    "rating": "4.6",
+    "sold": "70",
+    "remaining": "5",
+    "total_reviews": "35",
+    "availability": "Sold Out"
+  },
+  {
+    "_id": "6523d27dd27f56692b2c031d",
+    "image": "https://i.ibb.co/NV5vXs8/ear-rings-6.jpg",
+    "category": "earrings",
+    "title": "Pearl Drop Earrings",
+    "price": "34.99",
+    "rating": "4.8",
+    "sold": "75",
+    "remaining": "5",
+    "total_reviews": "30",
+    "availability": "Sold Out"
+  },
+  {
+    "_id": "6523d27dd27f56692b2c031f",
+    "image": "https://i.ibb.co/K09YTv4/ear-rings-4.jpg",
+    "category": "earrings",
+    "title": "Dangling Silver Stars",
+    "price": "27.99",
+    "rating": "4.7",
+    "sold": "60",
+    "remaining": "30",
+    "total_reviews": "28",
+    "availability": "In Stock"
+  },
+  {
+    "_id": "6523d27dd27f56692b2c031c",
+    "image": "https://i.ibb.co/QD7WpN7/ear-rings-7.jpg",
+    "category": "earrings",
+    "title": "Crystal Stud Earrings",
+    "price": "19.99",
+    "rating": "4.2",
+    "sold": "35",
+    "remaining": "15",
+    "total_reviews": "18",
+    "availability": "In Stock"
+  },
+  {
+    "_id": "6523d27dd27f56692b2c031b",
+    "image": "https://i.ibb.co/Qf06v3R/ear-rings-8.jpg",
+    "category": "earrings",
+    "title": "Elegant Silver Hoops",
+    "price": "29.99",
+    "rating": "4.5",
+    "sold": "50",
+    "remaining": "20",
+    "total_reviews": "25",
+    "availability": "In Stock"
+  },
+
+  {
+    "_id": "6523d27dd27f56692b2c0320",
+    "image": "https://i.ibb.co/rcCVFjC/ear-rings-3.jpg",
+    "category": "earrings",
+    "title": "Gemstone Chandelier Earrings",
+    "price": "39.99",
+    "rating": "4.9",
+    "sold": "90",
+    "remaining": "15",
+    "total_reviews": "45",
+    "availability": "In Stock"
+  },
+
+  {
+    "_id": "6523d27dd27f56692b2c031e",
+    "image": "https://i.ibb.co/6gg8GfJ/ear-ring.jpg",
+    "category": "earrings",
+    "title": "Gold Flower Earrings",
+    "price": "22.99",
+    "rating": "4",
+    "sold": "40",
+    "remaining": "10",
+    "total_reviews": "22",
+    "availability": "In Stock"
+  },
+  {
+    "_id": "6523d27dd27f56692b2c0321",
+    "image": "https://i.ibb.co/CB2HTnL/ear-rings-2.jpg",
+    "category": "earrings",
+    "title": "Silver Filigree Earrings",
+    "price": "26.99",
+    "rating": "4.4",
+    "sold": "55",
+    "remaining": "25",
+    "total_reviews": "20",
+    "availability": "In Stock"
+  },
+  {
+    "_id": "6523d2bcd27f56692b2cade8",
+    "category": "Rings",
+    "title": "Ruby Cocktail Ring",
+    "price": "199.99",
+    "rating": "4.3",
+    "image": "https://i.ibb.co/VHfq8kH/1.png",
+    "sold": "70",
+    "remaining": "30",
+    "total_reviews": "22",
+    "availability": "Sold Out"
+  },
+
+  {
+    "_id": "6523d2bcd27f56692b2cade5",
+    "category": "Bracelets",
+    "title": "Gold Bangle Bracelet",
+    "price": "149.99",
+    "rating": "4",
+    "image": "https://i.ibb.co/PYgtrZJ/5.png",
+    "sold": "60",
+    "remaining": "40",
+    "total_reviews": "15",
+    "availability": "In Stock"
+  },
+  {
+    "_id": "6523d2bcd27f56692b2cade2",
+    "category": "Necklaces",
+    "title": "Diamond Pendant Necklace",
+    "price": "199.99",
+    "rating": "4.5",
+    "image": "https://i.ibb.co/Db3NV9p/8.png",
+    "sold": "50",
+    "remaining": "50",
+    "total_reviews": "25",
+    "availability": "In Stock"
+  },
+  {
+    "_id": "6523d2bcd27f56692b2cade3",
+    "category": "Earrings",
+    "title": "Pearl Stud Earrings",
+    "price": "99.99",
+    "rating": "3.8",
+    "image": "https://i.ibb.co/PCKgdTg/7.png",
+    "sold": "75",
+    "remaining": "25",
+    "total_reviews": "18",
+    "availability": "In Stock"
+  },
+
+  {
+    "_id": "6523d2bcd27f56692b2cade3",
+    "category": "Earrings",
+    "title": "Pearl Stud Earrings",
+    "price": "99.99",
+    "rating": "3.8",
+    "image": "https://i.ibb.co/PCKgdTg/7.png",
+    "sold": "75",
+    "remaining": "25",
+    "total_reviews": "18",
+    "availability": "In Stock"
+  },
+  {
+    "_id": "6523d2bcd27f56692b2cade6",
+    "category": "Earrings",
+    "title": "Emerald Drop Earrings",
+    "price": "249.99",
+    "rating": "4.7",
+    "image": "https://i.ibb.co/HzJgZVR/4.png",
+    "sold": "90",
+    "remaining": "10",
+    "total_reviews": "30",
+    "availability": "In Stock"
+  },
+  {
+    "_id": "6523d2bcd27f56692b2cade4",
+    "category": "Rings",
+    "title": "Sapphire Engagement Ring",
+    "price": "349.99",
+    "rating": "4.2",
+    "image": "https://i.ibb.co/9G0kVkv/download.png",
+    "sold": "20",
+    "remaining": "80",
+    "total_reviews": "10",
+    "availability": "In Stock"
+  },
+  {
+    "_id": "6523d2bcd27f56692b2cade7",
+    "category": "Necklaces",
+    "title": "Sapphire and Diamond Necklace",
+    "price": "299.99",
+    "rating": "3.5",
+    "image": "https://i.ibb.co/19DFgyv/3.png",
+    "sold": "40",
+    "remaining": "60",
+    "total_reviews": "12",
+    "availability": "In Stock"
+  }
+]

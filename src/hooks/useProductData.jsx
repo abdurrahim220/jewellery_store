@@ -1,14 +1,25 @@
-import AxiosSecure from "./AxiosSecure";
-import { useQuery } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 
 const useProductData = () => {
-  const [baseUrl] = AxiosSecure();
+  const [products, setFakeData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const { data:products=[],isLoading: loading,  } = useQuery({
-    queryKey: ["products"],
-    queryFn: () => baseUrl.get(`products`).then((res) => res.data),
-  });
-  // console.log(products)
+  useEffect(() => {
+    setLoading(true);
+    fetch(`db.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        setFakeData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  // console.log(products);
+
   return [products, loading];
 };
 
