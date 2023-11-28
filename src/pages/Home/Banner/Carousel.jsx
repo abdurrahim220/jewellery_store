@@ -25,11 +25,11 @@ const ResCarousel = () => {
   ];
 
   return (
-    <div className="mt-5 mb-5 lg:flex container gap-3 mx-auto px-2">
+    <div className="mt-[73px] mb-5 md:flex container gap-3 mx-auto px-2">
       <div className="md:w-[70%]">
-        <Carousel >
+        <Carousel>
           {images.map((image, i) => {
-            const {image_url,id,title} = image
+            const { image_url, id, title } = image;
             return (
               <div key={id}>
                 <img src={image_url} alt="" />
@@ -41,15 +41,21 @@ const ResCarousel = () => {
       </div>
 
       <div className="justify-items-center md:w-[30%] relative">
-
-        <img src="https://i.ibb.co/fCsrsVH/right-side-image.jpg" className="h-[550px]  md:h-[705px]" alt="" />
+        <img
+          src="https://i.ibb.co/fCsrsVH/right-side-image.jpg"
+          className="sm:h-[350px]  xl:h-[704px]"
+          alt=""
+        />
         <div className="absolute bottom-20 lg:bottom-36 font-manrope left-0 w-full space-y-2 text-white  grid justify-items-center items-center">
-          <h3 className="uppercase font-semibold text-[1.2rem]">Gold Piercing</h3>
-          <h1 className="uppercase text-[2.5rem] md:text-[3.2rem] font-bold">Flash Sale</h1>
+          <h3 className="uppercase font-semibold text-[1.2rem]">
+            Gold Piercing
+          </h3>
+          <h1 className="uppercase text-[2.5rem] md:text-[3.2rem] font-bold">
+            Flash Sale
+          </h1>
           <p className="text-medium font-medium">15 Nov - 25 Nov</p>
           <Link className="underline font-medium">See more products</Link>
         </div>
-        
       </div>
     </div>
   );

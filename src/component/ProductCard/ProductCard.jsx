@@ -7,20 +7,20 @@ import { TbDetails } from "react-icons/tb";
 import { LuEye } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
-import ModalPopUp from "../Modal/Modal";
-import AddToCart from "../AddToCart/AddToCart";
+// import ModalPopUp from "../Modal/Modal";
+// import AddToCart from "../AddToCart/AddToCart";
 
 const ProductCard = ({ title, id, price, image, rating, availability }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const [modalCartOpen, setCartOpen] = useState(false);
+  // const [modalIsOpen, setIsOpen] = useState(false);
+  // const [modalCartOpen, setCartOpen] = useState(false);
   // console.log(id)
 
   // const [bookmarks, setBookmarks] = useState(
   //   JSON.parse(localStorage.getItem('bookmarks')) || []
   // );
-  const product = {title,price,image}
+  const product = { title, price, image };
 
   const addBookmark = () => {
     // const updatedBookmarks = [...bookmarks, product];
@@ -28,25 +28,23 @@ const ProductCard = ({ title, id, price, image, rating, availability }) => {
     // setBookmarks(updatedBookmarks);
     // console.log(updatedBookmarks)
     fetch("http://localhost:5001/products/addCart", {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(product),
-        })
-            .then((res) => res.json())
-            .then((result) => { 
-                // console.log(result) 
-            });
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        // console.log(result)
+      });
   };
 
- 
-   const handleSetCart =()=>{
-    setCartOpen(true)
-
-  }
-  const handleClick =()=>{
+  const handleSetCart = () => {
+    setCartOpen(true);
+  };
+  const handleClick = () => {
     addBookmark();
-    handleSetCart()
-  }
+    handleSetCart();
+  };
 
   return (
     <div>
@@ -69,25 +67,24 @@ const ProductCard = ({ title, id, price, image, rating, availability }) => {
                 <HiOutlineShoppingCart size={25} />
               </button>
 
-              <AddToCart
+              {/* <AddToCart
                 modalIsOpen={modalCartOpen}
                 id={id}
                 setIsOpen={setCartOpen}
-             
                 close={() => setCartOpen(false)}
-              />
+              /> */}
             </div>
 
             <div>
-              <button onClick={() => setIsOpen(true)} title="short details">
+              {/* <button onClick={() => setIsOpen(true)} title="short details">
                 <LuEye color="white" size={25} />
-              </button>
-              <ModalPopUp
+              </button> */}
+              {/* <ModalPopUp
                 modalIsOpen={modalIsOpen}
                 id={id}
                 setIsOpen={setIsOpen}
                 close={() => setIsOpen(false)}
-              />
+              /> */}
             </div>
 
             <Link to={`/singleProduct/${id}`}>

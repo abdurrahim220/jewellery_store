@@ -40,7 +40,6 @@ const Navbar = () => {
   return (
     <nav className="border-b">
       <div className="h-10vh flex justify-between z-50 text-black container py-4 lg:py-6 mx-auto  ">
-        
         <div className="flex items-center flex-1">
           <span className="text-3xl font-bold">Logo</span>
         </div>

@@ -1,5 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
-import AxiosSecure from "../../hooks/AxiosSecure";
+
 import Modal from "react-modal";
 import { Carousel } from "react-responsive-carousel";
 

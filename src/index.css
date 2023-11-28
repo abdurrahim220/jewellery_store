@@ -17,5 +17,13 @@ li:hover::before {
   background: #2a68ff;
   right: 0;
   bottom: -10px;
+  
   color: #2a68ff;
 } */
+
+
+@layer utilities{
+  .bg-navbar{
+    @apply bg-gradient-to-l from-violet-900 via-violet-800 to-violet-900
+  }
+}

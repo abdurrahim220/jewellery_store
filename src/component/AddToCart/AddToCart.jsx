@@ -1,6 +1,6 @@
-import { useQuery } from "@tanstack/react-query";
+
 import React from "react";
-import AxiosSecure from "../../hooks/AxiosSecure";
+
 import Modal from "react-modal";
 import { AiOutlineClose } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -17,11 +17,8 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 // };
 
 const AddToCart = ({ modalIsOpen, setIsOpen }) => {
-  const [baseUrl] = AxiosSecure();
-  const { refetch,data: product = [], isLoading: loading } = useQuery({
-    queryKey: ["product"],
-    queryFn: () => baseUrl.get(`item`).then((res) => res.data),
-  });
+
+ 
 
   //   console.log(product)
 
